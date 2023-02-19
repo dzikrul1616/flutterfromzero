@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterfromzero/app/modules/HeroAnimation/views/widget_view.dart';
 import 'package:flutterfromzero/app/modules/MovieApp/views/moivepage.dart';
 import 'package:flutterfromzero/app/modules/MovieApp/views/movie_app_view.dart';
+import 'package:flutterfromzero/app/modules/Reparasi/reparasi.dart';
 
 import 'package:get/get.dart';
 
@@ -57,6 +58,24 @@ class HomeView extends GetView<HomeController> {
                     ),
                     style: ElevatedButton.styleFrom(
                       primary: Colors.green,
+                    )),
+              ),
+              const SizedBox(
+                height: 10.0,
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 50,
+                child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Reparasi()));
+                    },
+                    child: Center(
+                      child: Text('UI REPARASI'),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.blueAccent,
                     )),
               ),
             ],
