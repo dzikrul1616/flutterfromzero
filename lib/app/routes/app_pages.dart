@@ -1,3 +1,5 @@
+import 'package:flutterfromzero/app/modules/Reparasi/Rekomendasi/movie_app_view.dart';
+import 'package:flutterfromzero/app/modules/Reparasi/reparasi.dart';
 import 'package:get/get.dart';
 
 import '../modules/HeroAnimation/bindings/widget_binding.dart';
@@ -36,5 +38,6 @@ class AppPages {
       ),
       binding: MovieAppBinding(),
     ),
+    GetPage(name: _Paths.REPARASI, page: () => Reparasi())
   ];
 }

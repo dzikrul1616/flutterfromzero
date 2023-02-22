@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutterfromzero/app/modules/HeroAnimation/views/widget_view.dart';
 import 'package:flutterfromzero/app/modules/MovieApp/views/moivepage.dart';
 import 'package:flutterfromzero/app/modules/MovieApp/views/movie_app_view.dart';
+import 'package:flutterfromzero/app/modules/Reparasi/Bottom%20Bar/bottomBar.dart';
+import 'package:flutterfromzero/app/modules/Reparasi/RowKategoriBanner.dart';
 import 'package:flutterfromzero/app/modules/Reparasi/reparasi.dart';
 
 import 'package:get/get.dart';
@@ -69,7 +71,7 @@ class HomeView extends GetView<HomeController> {
                 child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Reparasi()));
+                          MaterialPageRoute(builder: (context) => BottomBar()));
                     },
                     child: Center(
                       child: Text('UI REPARASI'),

@@ -6,6 +6,7 @@ class SsdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.amber,
         title: Text('SSD'),
       ),
       body: Center(

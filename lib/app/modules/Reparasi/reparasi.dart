@@ -5,6 +5,9 @@ import 'package:flutterfromzero/app/modules/Reparasi/Banner.dart';
 import 'package:flutterfromzero/app/modules/Reparasi/CariWidget.dart';
 import 'package:flutterfromzero/app/modules/Reparasi/Kategori/Komputer.dart';
 import 'package:flutterfromzero/app/modules/Reparasi/Kategori/ssd.dart';
+import 'package:flutterfromzero/app/modules/Reparasi/Rekomendasi/Model.dart';
+import 'package:flutterfromzero/app/modules/Reparasi/Rekomendasi/Rekomendasi.dart';
+import 'package:flutterfromzero/app/modules/Reparasi/Rekomendasi/moviedesc.dart';
 import 'package:flutterfromzero/app/modules/Reparasi/RowKategoriBanner.dart';
 import 'package:flutterfromzero/app/modules/home/views/home_view.dart';
 
@@ -12,10 +15,65 @@ class Reparasi extends StatefulWidget {
   const Reparasi({Key? key}) : super(key: key);
 
   @override
-  State<Reparasi> createState() => _ReparasiState();
+  State<Reparasi> createState() => _ReparasiState(
+        deskripsi: [
+          "Movie 1 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Movie 2 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Movie 3 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Movie 4 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Movie 5 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Movie 6 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Movie 6 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Movie 1 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Movie 2 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Movie 3 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Movie 4 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Movie 5 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Movie 6 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Movie 6 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Movie 6 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        ],
+        gambar: [
+          "assets/movie1.jpg",
+          "assets/movie2.jpg",
+          "assets/movie3.jpg",
+          "assets/movie3.jpg",
+          "assets/movie3.jpg",
+          "assets/movie3.jpg",
+          "assets/movie3.jpg",
+          "assets/movie1.jpg",
+          "assets/movie2.jpg",
+          "assets/movie3.jpg",
+          "assets/movie3.jpg",
+          "assets/movie3.jpg",
+          "assets/movie3.jpg",
+          "assets/movie3.jpg",
+        ],
+        judul: [
+          "Komputer",
+          "Laptop",
+          "Judul 4",
+          "Judul 5",
+          "Judul 6",
+          "Judul 7",
+          "Judul 8",
+          "Judul 9",
+          "Judul 10",
+          "Judul 11",
+          "Judul 12",
+          "Judul 13",
+          "Judul 14",
+          "Judul 15",
+        ],
+      );
 }
 
 class _ReparasiState extends State<Reparasi> {
+  final List<String> gambar;
+  final List<String> judul;
+  final List<String> deskripsi;
+  _ReparasiState(
+      {required this.gambar, required this.judul, required this.deskripsi});
   var item = [
     "komputer",
     "android",
@@ -24,6 +82,7 @@ class _ReparasiState extends State<Reparasi> {
     "rakit komputer",
     "service"
   ];
+
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
@@ -59,21 +118,6 @@ class _ReparasiState extends State<Reparasi> {
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: CariWidget(),
                 ),
-                const SizedBox(
-                  height: 20.0,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: Text(
-                    'Service',
-                    style: const TextStyle(
-                        fontSize: 15, fontWeight: FontWeight.w400),
-                  ),
-                ),
-                const SizedBox(
-                  height: 10.0,
-                ),
-                RowBanner(),
                 const SizedBox(
                   height: 20.0,
                 ),
@@ -146,6 +190,103 @@ class _ReparasiState extends State<Reparasi> {
                           ),
                         );
                       },
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Text(
+                    'Service',
+                    style: const TextStyle(
+                        fontSize: 15, fontWeight: FontWeight.w400),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10.0,
+                ),
+                RowBanner(),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Text(
+                    'Rekomendasi',
+                    style: const TextStyle(
+                        fontSize: 15, fontWeight: FontWeight.w400),
+                  ),
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 1.64,
+                  child: GridView.count(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 15,
+                    crossAxisSpacing: 15,
+                    physics: const NeverScrollableScrollPhysics(),
+                    padding: EdgeInsets.all(20),
+                    children: List.generate(
+                      gambar.length,
+                      (index) => InkWell(
+                        onLongPress: () {
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                content: Container(
+                                  child: Image.asset(
+                                    gambar[index],
+                                    height: 300,
+                                    width: 120,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              );
+                            },
+                          );
+                        },
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (_) => HeroAnimation2(
+                                gambar: gambar[index],
+                                judul: judul[index],
+                                deskripsi: deskripsi[index],
+                              ),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.grey[200],
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Hero(
+                                tag: judul[index],
+                                child: Image.asset(
+                                  gambar[index],
+                                  height: 130,
+                                  width: 130,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              SizedBox(height: 10),
+                              Text(
+                                judul[index],
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),

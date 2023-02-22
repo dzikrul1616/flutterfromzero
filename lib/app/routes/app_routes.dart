@@ -6,6 +6,7 @@ abstract class Routes {
   static const HOME = _Paths.HOME;
   static const WIDGET = _Paths.WIDGET;
   static const MOVIE_APP = _Paths.MOVIE_APP;
+  static const REPARASI = _Paths.REPARASI;
 }
 
 abstract class _Paths {
@@ -13,4 +14,5 @@ abstract class _Paths {
   static const HOME = '/home';
   static const WIDGET = '/widget';
   static const MOVIE_APP = '/movie-app';
+  static const REPARASI = '/reparasi';
 }
